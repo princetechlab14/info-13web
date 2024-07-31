@@ -1,9 +1,9 @@
-import Homepage from "@/components/Homepage";
+import React, { useEffect } from "react";
 import Layout from "@/components/Layout";
+import BlogDetail from "@/components/BlogDetail";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
 
-export default function Home() {
+const BlogDetails = () => {
   const router = useRouter();
 
   useEffect(() => {
@@ -15,7 +15,9 @@ export default function Home() {
 
   return (
     <Layout>
-      <Homepage />
+      <BlogDetail />
     </Layout>
   );
-}
+};
+
+export default BlogDetails;
